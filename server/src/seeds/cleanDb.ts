@@ -5,7 +5,7 @@ export default async (modelName: "Question", collectionName: string) => {
   try {
     const model = models[modelName]; 
     if (model) { 
-      let modelExists = await model.db.db.listCollections({
+      let modelExists = await model?.db.db.listCollections({
         name: collectionName
       }).toArray();
 
