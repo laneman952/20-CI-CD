@@ -33,9 +33,6 @@ jobs:
       - name: Deploy
         if: github.ref == 'refs/heads/main'
         env:
-          DEPLOY_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+          deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
         run: |
           curl "$deploy_url"
-# curl is used to trigger the deployment on Render. The URL is stored in GitHub secrets for security.
-          # Make sure to replace $deploy_url with the actual secret name if different.
-          # Example: curl "$RENDER_DEPLOY_HOOK_URL"

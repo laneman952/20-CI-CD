@@ -4,7 +4,7 @@
 
   
   ## Description
-  This project is creating a   
+  This project is creating a CI/CD pipeline with GitHub Actions. 
 
 
   ## Table of Contents
